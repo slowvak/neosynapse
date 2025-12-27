@@ -1,0 +1,382 @@
+/* ==========================================
+   ARTICLE-SPECIFIC STYLES
+   ========================================== */
+
+/* Article Header */
+.article-header {
+    background: linear-gradient(135deg, var(--navy-dark) 0%, var(--navy-medium) 100%);
+    padding: 120px 0 60px;
+    margin-bottom: var(--spacing-xl);
+}
+
+.article-header-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.article-header .article-tag {
+    margin: 0 auto var(--spacing-md);
+}
+
+.article-header-title {
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 5vw, 3rem);
+    color: var(--white-neural);
+    margin-bottom: var(--spacing-md);
+    line-height: 1.2;
+    font-weight: 700;
+}
+
+.article-header-subtitle {
+    font-size: 1.25rem;
+    color: var(--gray-silver);
+    margin-bottom: var(--spacing-md);
+    line-height: 1.6;
+}
+
+.article-meta-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--spacing-sm);
+    color: var(--gray-silver);
+    font-size: 0.95rem;
+}
+
+.article-divider {
+    color: var(--teal-primary);
+}
+
+.article-date,
+.article-reading-time,
+.article-author {
+    color: var(--gray-silver);
+}
+
+/* Article Body */
+.article-body {
+    background: var(--white-neural);
+    padding-bottom: var(--spacing-xl);
+}
+
+.article-content {
+    max-width: 720px;
+    margin: 0 auto;
+}
+
+/* Typography */
+.article-content p {
+    font-size: 1.125rem;
+    line-height: 1.8;
+    color: var(--gray-dark);
+    margin-bottom: var(--spacing-md);
+}
+
+.article-content p.lead {
+    font-size: 1.35rem;
+    line-height: 1.7;
+    color: var(--navy-dark);
+    font-weight: 400;
+    margin-bottom: var(--spacing-lg);
+    padding-left: var(--spacing-md);
+    border-left: 4px solid var(--teal-primary);
+}
+
+.article-content h2 {
+    font-family: var(--font-display);
+    font-size: 2rem;
+    color: var(--navy-dark);
+    margin-top: var(--spacing-xl);
+    margin-bottom: var(--spacing-md);
+    font-weight: 600;
+    letter-spacing: -0.02em;
+}
+
+.article-content h3 {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    color: var(--navy-dark);
+    margin-top: var(--spacing-lg);
+    margin-bottom: var(--spacing-md);
+    font-weight: 600;
+}
+
+.article-content h4 {
+    font-family: var(--font-display);
+    font-size: 1.25rem;
+    color: var(--navy-dark);
+    margin-bottom: var(--spacing-sm);
+    font-weight: 600;
+}
+
+.article-content strong {
+    color: var(--navy-dark);
+    font-weight: 600;
+}
+
+.article-content em {
+    color: var(--teal-primary);
+    font-style: italic;
+}
+
+/* Lists */
+.article-content ul,
+.article-content ol {
+    margin: var(--spacing-md) 0;
+    padding-left: var(--spacing-lg);
+}
+
+.article-content li {
+    font-size: 1.125rem;
+    line-height: 1.8;
+    color: var(--gray-dark);
+    margin-bottom: var(--spacing-sm);
+}
+
+.article-content li strong {
+    color: var(--navy-dark);
+}
+
+/* Blockquotes */
+.article-quote {
+    background: linear-gradient(135deg, rgba(63, 209, 193, 0.05) 0%, rgba(63, 209, 193, 0.1) 100%);
+    border-left: 4px solid var(--teal-primary);
+    padding: var(--spacing-md) var(--spacing-lg);
+    margin: var(--spacing-lg) 0;
+    border-radius: 0 var(--border-radius) var(--border-radius) 0;
+}
+
+.article-quote p {
+    font-family: var(--font-display);
+    font-size: 1.35rem;
+    color: var(--navy-dark);
+    font-weight: 500;
+    margin: 0;
+    font-style: italic;
+}
+
+/* Callout Box */
+.article-callout {
+    background: var(--navy-dark);
+    color: var(--white-neural);
+    padding: var(--spacing-lg);
+    border-radius: var(--border-radius);
+    margin: var(--spacing-lg) 0;
+    border: 2px solid var(--teal-primary);
+}
+
+.article-callout h4 {
+    color: var(--teal-primary);
+    margin-top: 0;
+    margin-bottom: var(--spacing-sm);
+    font-size: 1.25rem;
+}
+
+.article-callout p {
+    color: var(--gray-silver);
+    margin-bottom: 0;
+}
+
+.article-callout em {
+    color: var(--teal-light);
+}
+
+/* Dividers */
+.article-divider-line {
+    border: none;
+    height: 2px;
+    background: linear-gradient(to right, transparent, var(--teal-primary), transparent);
+    margin: var(--spacing-xl) 0;
+}
+
+/* Conclusion */
+.article-conclusion {
+    font-size: 1.25rem;
+    color: var(--navy-dark);
+    font-weight: 500;
+}
+
+/* Article Footer */
+.article-footer {
+    max-width: 720px;
+    margin: var(--spacing-xl) auto 0;
+    padding-top: var(--spacing-lg);
+    border-top: 2px solid var(--gray-light);
+}
+
+/* Tags */
+.article-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-lg);
+}
+
+.article-tags .tag {
+    background: var(--gray-light);
+    color: var(--navy-dark);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.article-tags .tag:hover {
+    background: var(--teal-primary);
+    color: var(--white-neural);
+}
+
+/* Share Buttons */
+.article-share {
+    margin-bottom: var(--spacing-lg);
+    padding: var(--spacing-md) 0;
+}
+
+.article-share p {
+    color: var(--gray-dark);
+    margin-bottom: var(--spacing-sm);
+    font-weight: 600;
+}
+
+.share-buttons {
+    display: flex;
+    gap: var(--spacing-sm);
+}
+
+.share-btn {
+    padding: 0.625rem 1.25rem;
+    background: var(--gray-light);
+    color: var(--navy-dark);
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.share-btn:hover {
+    background: var(--teal-primary);
+    color: var(--white-neural);
+    transform: translateY(-2px);
+}
+
+/* Article CTA */
+.article-cta {
+    background: linear-gradient(135deg, var(--navy-dark) 0%, var(--navy-medium) 100%);
+    padding: var(--spacing-lg);
+    border-radius: var(--border-radius);
+    text-align: center;
+    margin-top: var(--spacing-lg);
+}
+
+.article-cta h3 {
+    color: var(--white-neural);
+    margin: 0 0 var(--spacing-sm) 0;
+    font-size: 1.5rem;
+}
+
+.article-cta p {
+    color: var(--gray-silver);
+    margin-bottom: var(--spacing-md);
+}
+
+/* Related Articles */
+.related-articles {
+    background: var(--white-neural);
+    padding: var(--spacing-xl) 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .article-header {
+        padding: 100px 0 40px;
+    }
+
+    .article-header-title {
+        font-size: 1.75rem;
+    }
+
+    .article-header-subtitle {
+        font-size: 1.125rem;
+    }
+
+    .article-meta-header {
+        flex-direction: column;
+        gap: 0.25rem;
+    }
+
+    .article-divider {
+        display: none;
+    }
+
+    .article-content p,
+    .article-content li {
+        font-size: 1.0625rem;
+    }
+
+    .article-content h2 {
+        font-size: 1.75rem;
+        margin-top: var(--spacing-lg);
+    }
+
+    .article-content h3 {
+        font-size: 1.35rem;
+    }
+
+    .article-quote p {
+        font-size: 1.125rem;
+    }
+
+    .share-buttons {
+        flex-wrap: wrap;
+    }
+}
+
+/* Code Blocks (for future technical articles) */
+.article-content pre {
+    background: var(--navy-dark);
+    color: var(--white-neural);
+    padding: var(--spacing-md);
+    border-radius: var(--border-radius);
+    overflow-x: auto;
+    margin: var(--spacing-md) 0;
+    border: 1px solid var(--teal-primary);
+}
+
+.article-content code {
+    background: rgba(63, 209, 193, 0.1);
+    color: var(--teal-primary);
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-family: 'Monaco', 'Courier New', monospace;
+    font-size: 0.9em;
+}
+
+.article-content pre code {
+    background: none;
+    padding: 0;
+    color: var(--teal-light);
+}
+
+/* Images */
+.article-content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: var(--border-radius);
+    margin: var(--spacing-lg) 0;
+    box-shadow: 0 10px 30px rgba(11, 28, 45, 0.1);
+}
+
+.article-content figure {
+    margin: var(--spacing-lg) 0;
+}
+
+.article-content figcaption {
+    text-align: center;
+    color: var(--gray-silver);
+    font-size: 0.95rem;
+    margin-top: var(--spacing-sm);
+    font-style: italic;
+}

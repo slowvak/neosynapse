@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Dr. Bradley J. Erickson, MD, PhD - Radiologist, AI researcher, and CEO of FlowSigma. 30+ years pioneering medical imaging informatics at mdsynapse.org">
+    <title>About Dr. Bradley J. Erickson | NeoSynapse.md</title>
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="profile">
+    <meta property="og:url" content="https://mdsynapse.org/about.html">
+    <meta property="og:title" content="About Dr. Bradley J. Erickson | NeoSynapse.md">
+    <meta property="og:description" content="Radiologist, AI researcher, and CEO of FlowSigma. 30+ years pioneering medical imaging informatics and artificial intelligence.">
+    <meta property="og:image" content="https://mdsynapse.org/og-image-about.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://mdsynapse.org/about.html">
+    <meta property="twitter:title" content="About Dr. Bradley J. Erickson | NeoSynapse.md">
+    <meta property="twitter:description" content="Radiologist, AI researcher, and CEO of FlowSigma. 30+ years pioneering medical imaging informatics and artificial intelligence.">
+    <meta property="twitter:image" content="https://mdsynapse.org/og-image-about.png">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://mdsynapse.org/about.html">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="article-styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .about-hero {
+            background: linear-gradient(135deg, var(--navy-dark) 0%, var(--navy-medium) 100%);
+            padding: 8rem 0 4rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .about-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 20% 50%, rgba(139, 92, 246, 0.1) 0%, transparent 50%),
+                        radial-gradient(circle at 80% 50%, rgba(6, 182, 212, 0.1) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .about-hero-content {
+            position: relative;
+            z-index: 10;
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .about-hero h1 {
+            font-family: var(--font-display);
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            color: white;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .about-hero .credentials {
+            font-size: 1.25rem;
+            color: var(--teal-primary);
+            margin-bottom: 1.5rem;
+            font-weight: 500;
+        }
+
+        .about-hero .tagline {
+            font-size: 1.125rem;
+            color: var(--gray-silver);
+            max-width: 700px;
+            margin: 0 auto 2rem;
+            line-height: 1.7;
+        }
+
+        .about-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            max-width: 800px;
+            margin: 3rem auto 0;
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 1.5rem;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            border: 1px solid rgba(6, 182, 212, 0.2);
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            font-size: 0.875rem;
+            color: var(--gray-silver);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .about-section {
+            padding: 4rem 0;
+        }
+
+        .about-section:nth-child(even) {
+            background: var(--gray-light);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-header h2 {
+            font-family: var(--font-display);
+            font-size: 2.5rem;
+            color: var(--navy-dark);
+            margin-bottom: 1rem;
+        }
+
+        .section-header p {
+            font-size: 1.125rem;
+            color: var(--gray-dark);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .bio-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .bio-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            border: 1px solid var(--gray-light);
+        }
+
+        .bio-card h3 {
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            color: var(--navy-dark);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .bio-card-icon {
+            width: 32px;
+            height: 32px;
+            background: var(--gradient-primary);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .bio-card ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .bio-card li {
+            padding: 0.75rem 0;
+            border-bottom: 1px solid var(--gray-light);
+            color: var(--gray-dark);
+            line-height: 1.6;
+        }
+
+        .bio-card li:last-child {
+            border-bottom: none;
+        }
+
+        .bio-card li strong {
+            color: var(--navy-dark);
+            display: block;
+            margin-bottom: 0.25rem;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, rgba(139, 92, 246, 0.05), rgba(6, 182, 212, 0.05));
+            border-left: 4px solid var(--accent-purple);
+            padding: 2rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+        }
+
+        .highlight-box p {
+            font-size: 1.125rem;
+            line-height: 1.8;
+            color: var(--navy-dark);
+            margin-bottom: 1rem;
+        }
+
+        .highlight-box p:last-child {
+            margin-bottom: 0;
+        }
+
+        .awards-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .award-item {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 12px;
+            border: 1px solid var(--gray-light);
+            transition: var(--transition);
+        }
+
+        .award-item:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 20px rgba(139, 92, 246, 0.15);
+            border-color: var(--accent-purple);
+        }
+
+        .award-year {
+            font-size: 0.875rem;
+            color: var(--teal-primary);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .award-title {
+            font-weight: 600;
+            color: var(--navy-dark);
+            margin-bottom: 0.5rem;
+        }
+
+        .award-org {
+            font-size: 0.875rem;
+            color: var(--gray-dark);
+        }
+
+        .publications-highlight {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 12px;
+            border: 1px solid var(--gray-light);
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .publications-highlight h3 {
+            font-family: var(--font-display);
+            font-size: 1.75rem;
+            color: var(--navy-dark);
+            margin-bottom: 1.5rem;
+        }
+
+        .pub-item {
+            padding: 1rem 0;
+            border-bottom: 1px solid var(--gray-light);
+        }
+
+        .pub-item:last-child {
+            border-bottom: none;
+        }
+
+        .pub-title {
+            font-weight: 600;
+            color: var(--navy-dark);
+            margin-bottom: 0.5rem;
+        }
+
+        .pub-meta {
+            font-size: 0.875rem;
+            color: var(--gray-dark);
+        }
+
+        .pub-meta a {
+            color: var(--teal-primary);
+            text-decoration: none;
+        }
+
+        .pub-meta a:hover {
+            text-decoration: underline;
+        }
+
+        .cta-section {
+            background: var(--navy-dark);
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            font-family: var(--font-display);
+            font-size: 2.5rem;
+            color: white;
+            margin-bottom: 1rem;
+        }
+
+        .cta-section p {
+            font-size: 1.125rem;
+            color: var(--gray-silver);
+            margin-bottom: 2rem;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        @media (max-width: 768px) {
+            .bio-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .about-stats {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="container">
+            <div class="nav-content">
+                <a href="index.html" class="logo">
+                    <div class="logo-mark">
+                        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="8" cy="18" r="3" fill="#8B5CF6" opacity="0.9"/>
+                            <circle cx="28" cy="18" r="3" fill="#06B6D4" opacity="0.9"/>
+                            <circle cx="18" cy="8" r="2.5" fill="#F43F5E" opacity="0.8"/>
+                            <circle cx="18" cy="28" r="2.5" fill="#F43F5E" opacity="0.8"/>
+                            <path d="M 11 18 Q 18 14 25 18" stroke="url(#grad1)" stroke-width="2" fill="none" opacity="0.7"/>
+                            <path d="M 18 11 L 18 25" stroke="url(#grad2)" stroke-width="1.5" fill="none" opacity="0.6"/>
+                            <circle cx="18" cy="18" r="4" fill="url(#radialGrad)" class="pulse"/>
+                            <circle cx="18" cy="18" r="2" fill="#22D3EE"/>
+                            <circle cx="13" cy="15" r="1" fill="#F43F5E" opacity="0.8"/>
+                            <circle cx="23" cy="21" r="1" fill="#8B5CF6" opacity="0.8"/>
+                            <defs>
+                                <linearGradient id="grad1" x1="11" y1="18" x2="25" y2="18">
+                                    <stop offset="0%" stop-color="#8B5CF6"/>
+                                    <stop offset="100%" stop-color="#06B6D4"/>
+                                </linearGradient>
+                                <linearGradient id="grad2" x1="18" y1="11" x2="18" y2="25">
+                                    <stop offset="0%" stop-color="#F43F5E"/>
+                                    <stop offset="100%" stop-color="#F43F5E"/>
+                                </linearGradient>
+                                <radialGradient id="radialGrad">
+                                    <stop offset="0%" stop-color="#22D3EE" stop-opacity="0.4"/>
+                                    <stop offset="100%" stop-color="#06B6D4" stop-opacity="0.1"/>
+                                </radialGradient>
+                            </defs>
+                        </svg>
+                    </div>
+                    <span class="logo-text">NeoSynapse<span class="logo-ext">.md</span></span>
+                </a>
+                <div class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="index.html#articles">Articles</a>
+                    <a href="index.html#connect" class="nav-cta">Stay Connected</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="about-hero">
+        <div class="container">
+            <div class="about-hero-content">
+                <h1>Dr. Bradley J. Erickson</h1>
+                <p class="credentials">MD, PhD, FSIIM</p>
+                <p class="tagline">
+                    Radiologist, AI Researcher, and Healthcare Innovator at the intersection of medical imaging, artificial intelligence, and clinical workflow automation.
+                </p>
+
+                <div class="about-stats">
+                    <div class="stat-item">
+                        <div class="stat-number">30+</div>
+                        <div class="stat-label">Years AI & Imaging Research</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">200+</div>
+                        <div class="stat-label">Publications</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">80+</div>
+                        <div class="stat-label">Trainees</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bio Section -->
+    <section class="about-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Pioneering Medical AI & Imaging Informatics</h2>
+                <p>Leading the transformation of radiology through artificial intelligence, workflow automation, and evidence-based innovation.</p>
+            </div>
+
+            <div class="highlight-box">
+                <p>
+                    Dr. Bradley Erickson is a Professor of Radiology at Mayo Clinic, Director of the Mayo Clinic AI Lab, and CEO of <a href="https://flowsigma.com" target="_blank" style="color: var(--teal-primary);">FlowSigma</a>. With dual MD and PhD degrees from Mayo Medical and Graduate School, he has spent over three decades pioneering medical imaging informatics and artificial intelligence research, mentoring 80+ trainees along the way.
+                </p>
+                <p>
+                    His work bridges clinical practice, cutting-edge research, and real-world implementation—from leading Mayo Clinic's transition to filmless and paperless operations to developing deep learning algorithms that transform how physicians diagnose and treat disease.
+                </p>
+            </div>
+
+            <div class="bio-grid">
+                <div class="bio-card">
+                    <h3>
+                        <div class="bio-card-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                                <circle cx="12" cy="7" r="4"/>
+                            </svg>
+                        </div>
+                        Current Positions
+                    </h3>
+                    <ul>
+                        <li>
+                            <strong>Professor of Radiology</strong>
+                            Mayo Clinic College of Medicine
+                        </li>
+                        <li>
+                            <strong>Director, Mayo Clinic AI Lab</strong>
+                            Mentored 80+ trainees in medical AI research
+                        </li>
+                        <li>
+                            <strong>CEO, FlowSigma</strong>
+                            Clinical workflow automation and AI integration
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bio-card">
+                    <h3>
+                        <div class="bio-card-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                                <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+                                <path d="M6 12v5c3 3 9 3 12 0v-5"/>
+                            </svg>
+                        </div>
+                        Education
+                    </h3>
+                    <ul>
+                        <li>
+                            <strong>MD & PhD</strong>
+                            Mayo Medical and Graduate School
+                        </li>
+                        <li>
+                            <strong>Residency</strong>
+                            Radiology, Mayo Clinic
+                        </li>
+                        <li>
+                            <strong>Fellowship</strong>
+                            Neuroradiology, Mayo Clinic
+                        </li>
+                        <li>
+                            <strong>Board Certifications</strong>
+                            American Board of Radiology, American Board of Imaging Informatics
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bio-card">
+                    <h3>
+                        <div class="bio-card-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"/>
+                                <polyline points="12 6 12 12 16 14"/>
+                            </svg>
+                        </div>
+                        Leadership Roles
+                    </h3>
+                    <ul>
+                        <li>
+                            <strong>Past President</strong>
+                            Society for Imaging Informatics in Medicine (SIIM)
+                        </li>
+                        <li>
+                            <strong>Chair</strong>
+                            SIIM Research Committee
+                        </li>
+                        <li>
+                            <strong>Founding Chair</strong>
+                            Division of Imaging Informatics, Mayo Clinic
+                        </li>
+                        <li>
+                            <strong>Past Vice Chair for Research</strong>
+                            Dept Radiology, Mayo Clinic
+                        </li>
+                        <li>
+                            <strong>Editorial Board Member</strong>
+                            Multiple radiology and informatics journals
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bio-card">
+                    <h3>
+                        <div class="bio-card-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                                <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/>
+                                <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
+                            </svg>
+                        </div>
+                        Research Focus
+                    </h3>
+                    <ul>
+                        <li>Deep learning in medical imaging</li>
+                        <li>Workflow automation & optimization</li>
+                        <li>AI bias mitigation in healthcare</li>
+                        <li>FDA regulatory processes for AI/ML</li>
+                        <li>Brain cancer, MS, and kidney disease imaging</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Awards Section -->
+    <section class="about-section" style="background: var(--gray-light);">
+        <div class="container">
+            <div class="section-header">
+                <h2>Awards & Recognition</h2>
+                <p>Recognized globally for contributions to medical imaging informatics and artificial intelligence.</p>
+            </div>
+
+            <div class="awards-list">
+                <div class="award-item">
+                    <div class="award-year">2019</div>
+                    <div class="award-title">NVIDIA Global Impact Award</div>
+                    <div class="award-org">NVIDIA Corporation</div>
+                </div>
+
+                <div class="award-item">
+                    <div class="award-year">2013</div>
+                    <div class="award-title">Sam Dwyer Lecture in Informatics</div>
+                    <div class="award-org">Society for Imaging Informatics in Medicine (SIIM)</div>
+                </div>
+
+                <div class="award-item">
+                    <div class="award-year">2009</div>
+                    <div class="award-title">Carmen Award for Research Excellence</div>
+                    <div class="award-org">Mayo Clinic Department of Radiology</div>
+                </div>
+
+                <div class="award-item">
+                    <div class="award-year">Multiple Years</div>
+                    <div class="award-title">NIH Research Grants (PI)</div>
+                    <div class="award-org">Brain Cancer, Multiple Sclerosis, Polycystic Kidney Disease</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Publications Section -->
+    <section class="about-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Featured Publications</h2>
+                <p>Author of over 200 peer-reviewed publications on medical imaging AI, bias mitigation, and clinical informatics.</p>
+            </div>
+
+            <div class="publications-highlight">
+                <h3>Recent Key Publications</h3>
+
+                <div class="pub-item">
+                    <div class="pub-title">United States Food and Drug Administration Review Process and Key Challenges for Radiologic Artificial Intelligence</div>
+                    <div class="pub-meta">
+                        Zhang Y, Saini N, Janus S, Swenson DW, Cheng T, <strong>Erickson BJ</strong>. <em>J Am Coll Radiol.</em> 2024;21(6):920-929.
+                        <a href="https://doi.org/10.1016/j.jacr.2024.02.018" target="_blank">doi:10.1016/j.jacr.2024.02.018</a>
+                    </div>
+                </div>
+
+                <div class="pub-item">
+                    <div class="pub-title">Part 1: Mitigating Bias in Machine Learning—Data Handling</div>
+                    <div class="pub-meta">
+                        Rouzrokh P, Wyles CC, Philbrick KA, et al., <strong>Erickson BJ</strong>. <em>J Arthroplasty.</em> 2022;37(6S):S406-S413.
+                        <a href="https://doi.org/10.1016/j.arth.2022.02.092" target="_blank">doi:10.1016/j.arth.2022.02.092</a>
+                    </div>
+                </div>
+
+                <div class="pub-item">
+                    <div class="pub-title">Part 2: Mitigating Bias in Machine Learning—Model Development</div>
+                    <div class="pub-meta">
+                        Zhang Y, Wyles CC, Makhni MC, et al., <strong>Erickson BJ</strong>. <em>J Arthroplasty.</em> 2022;37(6S):S414-S420.
+                        <a href="https://doi.org/10.1016/j.arth.2022.02.085" target="_blank">doi:10.1016/j.arth.2022.02.085</a>
+                    </div>
+                </div>
+
+                <div class="pub-item">
+                    <div class="pub-title">Part 3: Mitigating Bias in Machine Learning—Performance Metrics, Healthcare Applications, and Fairness in Machine Learning</div>
+                    <div class="pub-meta">
+                        Faghani S, Khosravi B, Moassefi M, Rouzrokh P, <strong>Erickson BJ</strong>. <em>J Arthroplasty.</em> 2022;37(6S):S421-S428.
+                        <a href="https://doi.org/10.1016/j.arth.2022.02.087" target="_blank">doi:10.1016/j.arth.2022.02.087</a>
+                    </div>
+                </div>
+
+                <div class="pub-item">
+                    <div class="pub-title">Artificial Intelligence in Radiology: a Primer for Radiologists</div>
+                    <div class="pub-meta">
+                        <strong>Erickson BJ</strong>, Kitamura F. <em>Radiol Clin North Am.</em> 2021;59(6):991-1003.
+                        <a href="https://doi.org/10.1016/j.rcl.2021.07.004" target="_blank">doi:10.1016/j.rcl.2021.07.004</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission Section -->
+    <section class="about-section" style="background: var(--gray-light);">
+        <div class="container">
+            <div class="section-header">
+                <h2>Mission & Vision</h2>
+            </div>
+
+            <div class="highlight-box" style="max-width: 800px; margin: 0 auto;">
+                <p>
+                    <strong>My mission is to bridge the gap between cutting-edge AI research and practical clinical implementation.</strong> Too many promising AI tools fail at deployment—not because the algorithms are inadequate, but because they ignore the realities of clinical workflows, physician trust, and patient safety.
+                </p>
+                <p>
+                    Through NeoSynapse.md, I aim to educate the next generation of clinicians on how to critically evaluate AI, demand transparency from vendors, and advocate for tools that genuinely improve patient care—not just boost metrics in research papers.
+                </p>
+                <p>
+                    At FlowSigma, we're building the infrastructure to make medical AI work in practice: embedded workflows, automated quality checks, and systems that respect how physicians actually work. Because the future of medicine isn't about replacing clinicians—it's about empowering them with intelligent, reliable tools that let them focus on what matters most: healing.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Connect & Collaborate</h2>
+            <p>Interested in medical AI research, workflow automation, or healthcare innovation?</p>
+
+            <div class="cta-buttons">
+                <a href="https://www.linkedin.com/in/bradleyerickson/" target="_blank" class="btn btn-primary">
+                    LinkedIn
+                </a>
+                <a href="https://flowsigma.com" target="_blank" class="btn btn-secondary">
+                    FlowSigma
+                </a>
+                <a href="https://www.mayo.edu/research/faculty/erickson-bradley-j-m-d-ph-d/bio-00077505" target="_blank" class="btn btn-secondary">
+                    Mayo Clinic Profile
+                </a>
+                <a href="index.html#connect" class="btn btn-secondary">
+                    Newsletter
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-bottom">
+                    <div class="footer-links">
+                        <a href="index.html">Home</a>
+                        <a href="about.html">About</a>
+                        <a href="index.html#articles">Articles</a>
+                        <a href="index.html#mission">Mission</a>
+                    </div>
+                </div>
+                <div class="footer-copyright">
+                    <p>&copy; 2025 NeoSynapse.md | Published at <a href="https://mdsynapse.org" style="color: var(--teal-primary); text-decoration: none;">mdsynapse.org</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
