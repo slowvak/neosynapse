@@ -86,11 +86,11 @@
                 <div class="article-content">
 
                     <p class="lead">
-                        Three years ago, your hospital spent $2 million on an AI sepsis predictor. Last month, you got an email asking why nobody uses it. You weren't surprised.
+                        Three years ago, your hospital spent a million dolars to buy and implement an AI sepsis predictor. Last month, you got an email asking why nobody uses it. You weren't surprised.
                     </p>
 
                     <p>
-                        The demo was impressive. The validation study showed 89% sensitivity. The vendor promised it would "revolutionize early detection." But now it sits dormant in your EHR—another alert no one clicks, another dashboard no one checks, another AI tool that failed the journey from lab to ward.
+                        The demo was impressive. The validation study showed 89% sensitivity. The vendor promised it would "revolutionize early detection." But now it sits dormant in your EHR—another alert the doctors just click through, another dashboard no one checks, another AI tool that failed the journey from lab to ward.
                     </p>
 
                     <p>
@@ -107,12 +107,8 @@
                         But here's the uncomfortable truth: <strong>publication doesn't equal implementation</strong>. A model that works brilliantly in a research dataset often crumbles when it meets the messy reality of clinical practice.
                     </p>
 
-                    <blockquote class="article-quote">
-                        "We have more AI papers than we have AI tools that physicians actually use."
-                    </blockquote>
-
                     <p>
-                        The gap between validation and deployment is vast. Research studies optimize for accuracy. Clinical deployment must optimize for <em>usability, integration, trust, and workflow fit</em>—none of which appear in a confusion matrix.
+                        The gap between validation and deployment is vast. Research studies optimize for accuracy. Clinical deployment must optimize for <em>usability, integration, trust, and efficiency</em>—none of which appear in a confusion matrix.
                     </p>
 
                     <h2>Where Deployment Breaks Down</h2>
@@ -124,7 +120,7 @@
                     <h3>1. Workflow Mismatch</h3>
 
                     <p>
-                        The sepsis predictor generates alerts every 15 minutes. But you're seeing 30 patients on rounds. The alert pops up. You're in the middle of a family conversation. You dismiss it. It pops up again. You dismiss it again. Within a week, you've trained yourself to ignore it entirely.
+                        The sepsis predictor generates alerts every 15 minutes. But you're seeing 30 patients on rounds. The alert pops up. You're in the middle of a family conversation. You don't see it because you are talking with the family. When you are done with that, you log into the EHR to document the decisions made. It pops up again and you immediately dismiss it because you don't want to lose your train of thought on the dicussion you just had with the family. Then you get a page about another patient so you quickly dismiss the alert because you need to address this other urgent matter. Within a week, you've trained yourself to ignore the alerts entirely.
                     </p>
 
                     <p>
@@ -155,18 +151,18 @@
                             Some systems get integration right. <a href="https://flowsigma.com" target="_blank" style="color: #3FD1C1;">FlowSigma</a>, a clinical workflow automation platform, uses BPMN (Business Process Model and Notation) to map AI directly into clinical processes. Instead of bolting AI onto existing workflows, it <em>embeds</em> intelligence into the actual steps clinicians already perform—FHIR queries for patient data, automated quality checks, and decision support that triggers at the right moment in the radiology workflow, not randomly throughout the day.
                         </p>
                         <p>
-                            The difference? Physicians don't "use the AI tool." They use their normal workflow, which happens to include AI. That's deployment done right.
+                            The difference? Physicians don't "use the AI tool." They use their normal workflow, which now has AI information integrated with the other information they review. That's deployment done right.
                         </p>
                     </div>
 
                     <h3>3. Latency and Infrastructure</h3>
 
                     <p>
-                        The algorithm takes 45 seconds to return a result. That's acceptable in research. It's unacceptable when you're trying to decide whether to intubate.
+                        The algorithm takes 45 seconds to return a result. That's acceptable in research. It's unacceptable when you're trying to decide whether to intubate. 
                     </p>
 
                     <p>
-                        <strong>The problem:</strong> Clinical decisions happen in real-time. AI that can't keep up gets ignored.
+                        <strong>The problem:</strong> Clinical decisions happen in real-time. AI that can't keep up gets ignored. In most cases, the workflow can anticipate the AI results that a clinician will want and have the results calculated in advance. And if a few results are not ever reviewed becuase they aren't relevant, that computation cost is small compared to the cost of wasting clnician time if the AI is not run pre-emptively. 
                     </p>
 
                     <p>
@@ -191,6 +187,13 @@
                         Physicians don't ignore alerts because they're careless. They ignore alerts because they've learned most alerts are noise. Adding more noise—even smart noise—doesn't help.
                     </p>
 
+
+                    <h3>5. Consistency Matters</h3>
+
+                    <p>
+                        Physicians believe they all follow the standard of care and practice in similar fashion to their colleague. To say otherwise would suggest 1 is wrong. But the fact is that all physicans learn their way of handling their workload and those differences can sometimes confuse colleagues and result in variability that impacts patient care. Medical societies put substnatial effort into defining appropriate care in certain conditions, but those are not always followed--sometimes by intention but often just by lack of understanding or awareness of all the information about a patient. There are similar issues in other industries. To reduce this variability, we need better tools for sharing information and aligning on best practices and BPMN was developed specifically to help with automation and standardization. Healthcare is far behind other industries in this regard and needs to catch up and the implmentation of AI tool is a wonderful opportunity.
+                    </p>
+
                     <h2>Human Factors Physicians Care About</h2>
 
                     <p>
@@ -212,7 +215,8 @@
                     </p>
 
                     <blockquote class="article-quote">
-                        "Physicians don't need perfect AI. They need AI they can <em>calibrate</em>—tools that help them understand when to trust the recommendation and when to question it."
+                        "Physicians don't expect perfect AI any more than they expect perfection in people. They <em> DO</em> need AI that communicates probabilities and certainty. Too many people think that the numerical output of the AI is the probability. In nearly all cases, it ISN'T! That value (the output of the final softmax layer is designed to improve training, not to be a probability of confidence. This is a critical mistake too many 'experts' make.
+                        It is possible to calibrate the output to a probability and it is possible to get a confidence estimate, but that takes extra work. 
                     </blockquote>
 
                     <h3>Responsibility When AI Is Wrong</h3>
@@ -222,59 +226,15 @@
                     </p>
 
                     <p>
-                        Not the algorithm. Not the vendor. <em>You.</em>
+                        Not the algorithm. Not the vendor. <em>You may not be legally responsible but you do have to deal with the consequences.</em>
                     </p>
 
                     <p>
-                        Physicians know this. So when the AI's reasoning is opaque, when you can't explain <em>why</em> it recommended what it did, the rational response is to fall back on your own clinical judgment.
+                        Physicians know this. So when the AI's reasoning is opaque, when AI doesn't explain <em>why</em> it recommended what it did, the rational response is to fall back on your own clinical judgment.
                     </p>
 
                     <p>
-                        Deployment fails when it ignores this reality. Tools that don't support physician accountability—by providing transparency, explainability, and audit trails—create liability without adding value.
-                    </p>
-
-                    <h2>Case Examples: When Deployment Fails</h2>
-
-                    <h3>Radiology Triage Tools That Don't Change Turnaround Time</h3>
-
-                    <p>
-                        An AI flags critical findings on chest X-rays—pneumothorax, pulmonary edema, mass lesions. Sounds valuable, right?
-                    </p>
-
-                    <p>
-                        Except the radiologist still has to read every image. The AI doesn't let them skip anything. It doesn't prioritize the worklist in a way that actually changes behavior. Critical cases still wait in the queue until the radiologist gets to them.
-                    </p>
-
-                    <p>
-                        <strong>Result:</strong> The tool adds steps without reducing time-to-diagnosis. Radiologists stop checking it.
-                    </p>
-
-                    <h3>Sepsis Prediction Models Ignored by Clinicians</h3>
-
-                    <p>
-                        Epic's Sepsis Model fires tens of thousands of alerts per hospital per year. Studies show many of these patients never had sepsis. Others were already being treated.
-                    </p>
-
-                    <p>
-                        Clinicians learned quickly: the alert doesn't mean sepsis. It means the algorithm <em>thinks there might be sepsis</em>, which isn't actionable when you already know the patient.
-                    </p>
-
-                    <p>
-                        <strong>Result:</strong> Alert fatigue. The tool that was supposed to save lives becomes background noise.
-                    </p>
-
-                    <h3>Risk Scores That Don't Alter Decisions</h3>
-
-                    <p>
-                        A readmission risk score tells you a patient has an 80% chance of returning within 30 days. Okay—now what?
-                    </p>
-
-                    <p>
-                        If the system doesn't tell you <em>what to do</em> with that information—which interventions to deploy, who to call, what resources to mobilize—the score is just a number. And numbers without actions don't change outcomes.
-                    </p>
-
-                    <p>
-                        <strong>Result:</strong> Physicians glance at the score, shrug, and move on.
+                        AI fails when it ignores this reality. Tools that don't support physician understanding by providing transparency, explainability, and confidence levels create liability without adding value.
                     </p>
 
                     <h3>When AI Gets It Catastrophically Wrong</h3>
@@ -318,17 +278,7 @@
                     </p>
 
                     <p>
-                        Successful systems define clear roles:
-                    </p>
-
-                    <ul>
-                        <li>AI flags abnormal EKG → cardiology gets paged automatically</li>
-                        <li>Sepsis alert fires → rapid response team is notified</li>
-                        <li>Readmission risk identified → care coordinator intervenes</li>
-                    </ul>
-
-                    <p>
-                        AI shouldn't just identify problems. It should trigger <em>workflows</em> that solve them.
+                        AI shouldn't just identify problems. It should trigger <em>workflows</em> that help healthcare teams solve them.
                     </p>
 
                     <div class="article-callout">
@@ -337,7 +287,7 @@
                             Platforms like FlowSigma solve this by designing workflows that route tasks to the right people at the right time. A quality control failure in radiology doesn't just generate an alert—it creates a <em>task</em> assigned to the QC team, complete with patient data, imaging metadata, and allergies pulled automatically from FHIR.
                         </p>
                         <p>
-                            The radiologist doesn't decide what to do with the AI output. The <em>workflow</em> decides. That's how you turn predictions into actions.
+                            The radiologist doesn't decide what to do with the AI output. The hospital defines their <em>workflow</em> for handling priority cases. That's how you turn predictions into actions.
                         </p>
                     </div>
 
@@ -352,7 +302,7 @@
                     </p>
 
                     <ul>
-                        <li>What the model learned from (and what it didn't)</li>
+                        <li>What the model learned including the populations and labeling methods</li>
                         <li>When the model is most reliable (and when it's not)</li>
                         <li>How to combine AI output with clinical judgment</li>
                         <li>When to override the algorithm—and how to document why</li>
@@ -412,9 +362,9 @@
                     <ol>
                         <li><strong>Where does this fit in my workflow?</strong><br>If the answer is "you'll log into a separate portal," that's a red flag.</li>
                         <li><strong>How long does it take to get results?</strong><br>If it's slower than your clinical decision-making, it won't be used.</li>
-                        <li><strong>What happens when it's wrong?</strong><br>If the vendor can't answer this clearly, they haven't thought through deployment.</li>
+                        <li><strong>How cana clinician detect when it's wrong?</strong><br>If the vendor can't answer this clearly, they haven't thought through deployment.</li>
                         <li><strong>Who else is using this successfully?</strong><br>Ask for references. Talk to clinicians at other institutions. If they're not using it either, walk away.</li>
-                        <li><strong>Can I see the training data?</strong><br>If the model was trained on a population that doesn't match yours, it probably won't work.</li>
+                        <li><strong>Does the training data match our patient population?</strong><br>If the model was trained on a population that doesn't match yours, it probably won't work well.</li>
                         <li><strong>How do I override it?</strong><br>If overriding is difficult, you'll ignore it instead. Good tools make disagreement easy.</li>
                     </ol>
 
@@ -443,7 +393,7 @@
                     <h2>The Hard Truth About Medical AI</h2>
 
                     <p class="article-conclusion">
-                        Most medical AI never makes it to the bedside not because the algorithms are bad, but because deployment is hard. Harder than research. Harder than validation. Harder than getting published.
+                        Most medical AI never makes it to the bedside not because the algorithms are bad, but because deployment is hard. Harder than research. Harder than validation. Harder than getting published. Too many deployments 'hard code' any integration of teh AI tool making it difficult or expensive to adapt as workflows change or as the AI model is updated.
                     </p>
 
                     <p class="article-conclusion">
@@ -464,9 +414,9 @@
                     <div class="article-callout">
                         <h4>Key Takeaways</h4>
                         <ul style="margin: 0; padding-left: 1.5rem;">
-                            <li><strong>Publication ≠ Implementation:</strong> A model that works in research often fails in clinical practice due to workflow mismatches, not poor accuracy.</li>
+                            <li><strong>Publication Results don't guarantee clinical success:</strong> A model that works in research often fails in clinical practice due to workflow mismatches, not poor accuracy.</li>
                             <li><strong>Deployment Failures:</strong> Most AI tools fail due to poor EHR integration, alert fatigue, latency issues, and lack of workflow embedding.</li>
-                            <li><strong>Successful AI is Embedded:</strong> Tools that work live <em>inside</em> clinical workflows (not adjacent to them) and trigger actionable escalation pathways.</li>
+                            <li><strong>Successful AI improves workflow:</strong> Tools that work live <em>inside</em> clinical workflows (not adjacent to them) and trigger actionable escalation pathways.</li>
                             <li><strong>Ask Before Adopting:</strong> Before using any AI tool, ask: Where does this fit in my workflow? What happens when it's wrong? Who else uses it successfully?</li>
                             <li><strong>Clinician Involvement Matters:</strong> AI designed <em>with</em> physicians (not just <em>for</em> them) has a far better chance of real-world success.</li>
                         </ul>

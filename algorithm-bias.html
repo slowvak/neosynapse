@@ -104,7 +104,7 @@
                     <h2>Why Bias in Medical AI Is Different</h2>
 
                     <p>
-                        Bias in healthcare AI isn't like bias in social media ads or loan approvals. It's not just unfair—it's <em>dangerous</em>. Because when an algorithm systematically under-serves a population, people get sicker. They get misdiagnosed. They don't get referred for life-saving interventions.
+                        Bias in healthcare AI isn't like bias in social media ads or loan approvals. It's not just unfair—it's <em>dangerous</em>. Because when an algorithm systematically under-serves a population, people get sicker. They get misdiagnosed. They don't get referred for life-saving interventions. They lose trust in the system and disengage, leading to less data for future AI, leading to potentially greater disparities.
                     </p>
 
                     <p>
@@ -121,7 +121,6 @@
                         <li><strong>Access barriers:</strong> Underserved populations have fewer encounters, fewer tests, less documentation</li>
                         <li><strong>Diagnostic bias:</strong> Symptoms described differently across demographics (e.g., chest pain vs. "anxious," shortness of breath vs. "panic")</li>
                         <li><strong>Treatment disparities:</strong> Different populations receive different interventions for the same conditions</li>
-                        <li><strong>Structural racism:</strong> Redlining, insurance discrimination, provider distribution—all captured in the data</li>
                     </ul>
 
                     <p>
@@ -163,13 +162,12 @@
 
                     <ul>
                         <li>Rural populations</li>
-                        <li>Uninsured patients</li>
                         <li>Non-English speakers</li>
                         <li>Specific racial and ethnic minorities</li>
                     </ul>
 
                     <p>
-                        <strong>Result:</strong> Models perform worse on the populations they haven't seen during training. This data composition bias—arising from non-representative sampling during data collection—is one of the most fundamental sources of algorithmic inequity.<sup><a href="#ref7" style="color: var(--teal-primary);">7</a></sup>
+                        <strong>Result:</strong> Models perform worse on populations they haven't seen during training. This data composition bias, arising from non-representative sampling during data collection, is one of the fundamental sources of algorithmic inequity.<sup><a href="#ref7" style="color: var(--teal-primary);">7</a></sup>
                     </p>
 
                     <p>
@@ -222,7 +220,7 @@
                             <strong>Result:</strong> Black patients were systematically delayed in referral for transplant, dialysis, and nephrology care.
                         </p>
                         <p>
-                            In 2021, medical societies finally removed race from eGFR calculations—but millions of patients were harmed in the interim.
+                            In 2021, medical societies finally recommended that race be removed from eGFR calculations—but millions of patients were likely harmed in the interim.
                         </p>
                         <p>
                             <strong>Lesson:</strong> "Biologically justified" adjustments can still cause harm when they're based on flawed assumptions about race.
@@ -382,7 +380,7 @@
                     <div class="article-callout">
                         <h4>The Fairness Impossibility Theorem</h4>
                         <p>
-                            You <strong>cannot</strong> simultaneously achieve all types of fairness. Optimizing for one often worsens others.
+                            You <strong>cannot</strong> simultaneously achieve perfect fairness. Optimizing for one group often worsens others.
                         </p>
                         <p>
                             This means <strong>there is no "unbiased" algorithm</strong> in a mathematical sense. There are only <em>different tradeoffs</em>.
@@ -534,7 +532,7 @@
                     </p>
 
                     <ul style="font-size: 1.125rem; color: var(--navy-dark);">
-                        <li>Demanding transparency from vendors</li>
+                        <li>Demanding transparency from vendors on the data properties used to train algorithms</li>
                         <li>Testing algorithms on diverse populations before deployment</li>
                         <li>Monitoring performance by subgroup after deployment</li>
                         <li>Being willing to retire tools that exacerbate disparities</li>
